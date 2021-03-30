@@ -15,6 +15,7 @@ public class AppContas {
         System.out.println("Bó criar sua conta");
         System.out.println("=============================================");
         cliente.setCliente();
+        cliente.gerarNumeroConta();
         System.out.println("============================================= \n");
 
         System.out.println("[1] - Saque \n[2] - Depósito");
@@ -22,15 +23,15 @@ public class AppContas {
         System.out.println("Agora, digite o número da operação que você deseja realizar: \n");
         operacao = input.nextInt();
 
-        if(operacao == 1) {
+        switch (operacao) {
+            case 1:
             System.out.println("vamo sacar então");
-        }
-        if(operacao == 2) {
-            System.out.println("vamo deposita");
-        } else {
+            cliente.sacar();
+            break;
+            case 2:
+            System.out.println("vamos depositar então");
+            default:
             System.out.println("coloca o bagulho direito ne");
-        }
-
-
     }
+}
 }
