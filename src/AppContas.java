@@ -24,14 +24,16 @@ public class AppContas {
         operacao = input.nextInt();
 
         switch (operacao) {
-            case 1:
+        case 1:
             System.out.println("vamo sacar então");
             cliente.sacar();
             break;
-            case 2:
+        case 2:
             System.out.println("vamos depositar então");
-            default:
+            cliente.depositar();
+            break;
+        default:
             System.out.println("coloca o bagulho direito ne");
+        }
     }
-}
 }
